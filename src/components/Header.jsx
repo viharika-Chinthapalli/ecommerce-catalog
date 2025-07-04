@@ -57,7 +57,7 @@ export const Header = ({ onMenuToggle, isMenuOpen }) => {
           </div>
 
           <Link to="/">
-            <h1 className="text-black font-black tracking-widest text-xl absolute left-1/2 transform -translate-x-1/2 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <h1 className="text-black font-black tracking-widest text-xl transform hover:scale-105 transition-transform duration-300 cursor-pointer">
               LOGO
             </h1>
           </Link>
@@ -88,56 +88,65 @@ export const Header = ({ onMenuToggle, isMenuOpen }) => {
         </div>
 
         <div className="hidden md:block py-6 lg:py-8">
-          <div className="flex items-center justify-between mb-6 lg:mb-8">
-            <div className="w-12 h-12 flex items-center justify-center">
-              <img src={LogoIcon} className="w-10 h-10" alt="Logo" />
+          <div className="flex items-center mb-6 lg:mb-8">
+            {/* Left side - Logo icon */}
+            <div className="flex-1">
+              <div className="w-12 h-12 flex items-center justify-start">
+                <img src={LogoIcon} className="w-10 h-10" alt="Logo" />
+              </div>
             </div>
 
-            <Link to="/">
-              <h1 className="text-black font-black tracking-widest text-3xl lg:text-4xl absolute left-1/2 transform -translate-x-1/2 hover:scale-105 transition-transform duration-300 cursor-pointer">
-                LOGO
-              </h1>
-            </Link>
+            {/* Center - Logo text */}
+            <div className="flex-1 flex justify-center">
+              <Link to="/">
+                <h1 className="text-black font-black tracking-widest text-3xl lg:text-4xl hover:scale-105 duration-300 cursor-pointer">
+                  LOGO
+                </h1>
+              </Link>
+            </div>
 
-            <div className="flex items-center space-x-3 lg:space-x-4">
-              <div className="p-2 cursor-pointer">
-                <img
-                  src={searchIcon}
-                  alt="search-icon"
-                  className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
-                />
-              </div>
-              <div className="p-2 cursor-pointer">
-                <img
-                  src={heartIcon}
-                  alt="heart-icon"
-                  className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
-                />
-              </div>
-              <div className="p-2 cursor-pointer">
-                <img
-                  src={shoppingBagIcon}
-                  alt="shopping-icon"
-                  className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
-                />
-              </div>
-              <div className="p-2 cursor-pointer">
-                <img
-                  src={profileIcon}
-                  alt="Profile-icon"
-                  className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
-                />
-              </div>
+            {/* Right side - Icons and language selector */}
+            <div className="flex-1 flex justify-end">
+              <div className="flex items-center space-x-3 lg:space-x-4">
+                <div className="p-2 cursor-pointer">
+                  <img
+                    src={searchIcon}
+                    alt="search-icon"
+                    className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
+                  />
+                </div>
+                <div className="p-2 cursor-pointer">
+                  <img
+                    src={heartIcon}
+                    alt="heart-icon"
+                    className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
+                  />
+                </div>
+                <div className="p-2 cursor-pointer">
+                  <img
+                    src={shoppingBagIcon}
+                    alt="shopping-icon"
+                    className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
+                  />
+                </div>
+                <div className="p-2 cursor-pointer">
+                  <img
+                    src={profileIcon}
+                    alt="Profile-icon"
+                    className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
+                  />
+                </div>
 
-              <div className="flex items-center space-x-2 px-3 py-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                <span className="text-base text-gray-700 font-bold tracking-wide">
-                  ENG
-                </span>
-                <img
-                  src={arrowDown}
-                  alt="arrow-icon"
-                  className="w-4 h-4 transform rotate-180"
-                />
+                <div className="flex items-center space-x-2 px-3 py-2 cursor-pointer hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                  <span className="text-base text-gray-700 font-bold tracking-wide">
+                    ENG
+                  </span>
+                  <img
+                    src={arrowDown}
+                    alt="arrow-icon"
+                    className="w-4 h-4 transform rotate-180"
+                  />
+                </div>
               </div>
             </div>
           </div>
